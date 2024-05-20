@@ -1,3 +1,12 @@
+:root {
+    --primary-content: #ffffff;
+    --secondary-content: #7c7e83;
+
+    --content-bg: #141922;
+    --left-bar-bg: #000000;
+    --bottom-bar-bg: #282828;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,9 +16,43 @@
 body {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
+    color: var(--secondary-content);
 }
 
 a {
     color: inherit;
     text-decoration: inherit;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* UPPER CONTENT */
+.page {
+    flex-basis: calc(100vh - 90px);
+    display: flex;
+}
+
+/* Left navigation bar */
+.left-bar {
+    flex-basis: 230px;
+    height: 100%;
+    background-color: var(--left-bar-bg);
+}
+
+/* Main content */
+.content {
+    flex-basis: calc(100% - 230px);
+    height: 100%;
+    background: radial-gradient(ellipse at right 95% , #191f2b 0% , var(--content-bg) 90%) , var(--content-bg);
+}
+
+
+/* BOTTOM MENU BAR */
+.bottom-bar {
+    flex-basis: 90px;
+    background-color: var(--bottom-bar-bg);
 }
