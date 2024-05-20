@@ -1,3 +1,4 @@
+/* GENERAL RULES */
 :root {
     --primary-content: #ffffff;
     --secondary-content: #7c7e83;
@@ -8,10 +9,11 @@
 
     --title-fony: 1.5rem;
     --large-font: 1rem;
-    --medium-font: .8125rem;
-    --small-font: .625rem;
+    --medium-font: .75rem;
+    --small-font: .5rem;
 
     font-size: 16px;
+    font-weight: 700;
 }
 
 * {
@@ -19,7 +21,7 @@
     padding: 0;
     box-sizing: border-box;
 
-    line-height: .5;
+    line-height: 1.1;
 }
 
 body {
