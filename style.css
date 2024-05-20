@@ -1,16 +1,25 @@
 :root {
     --primary-content: #ffffff;
     --secondary-content: #7c7e83;
-
+    --details: #adff2f;
     --content-bg: #141922;
     --left-bar-bg: #000000;
     --bottom-bar-bg: #282828;
+
+    --title-fony: 1.5rem;
+    --large-font: 1rem;
+    --medium-font: .8125rem;
+    --small-font: .625rem;
+
+    font-size: 16px;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    line-height: .5;
 }
 
 body {
