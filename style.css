@@ -63,6 +63,38 @@ a {
     box-shadow: inset -.5rem 0 .3rem var(--bottom-bar-bg);
 }
 
+/* Slider */
+.slider {
+    height: .25rem;
+    border-radius: 100em;
+    cursor: pointer;
+    background-color: var(--secondary-content);
+}
+
+.slider div {
+    position: relative;
+    height: 100%;
+    border-radius: 100em;
+    background-color: var(--primary-content);
+}
+
+.slider:hover div {
+    background-color: var(--details);
+}
+
+.slider:hover div::after {
+    content: "";
+    position: absolute;
+    top: .125rem;
+    right: 0;
+    z-index: 1;
+    transform: translate(50% , -50%);
+    width: .75rem;
+    height: .75rem;
+    border-radius: 50%;
+    background-color: var(--primary-content);
+}
+
 
 /* UPPER CONTENT */
 .page {
