@@ -30,6 +30,10 @@ body {
     color: var(--secondary-content);
 }
 
+ul , menu {
+    list-style: none;
+}
+
 a {
     color: inherit;
     text-decoration: inherit;
