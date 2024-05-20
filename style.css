@@ -44,6 +44,25 @@ a {
     flex-direction: column;
 }
 
+/* Container that makes overflowing text disapear on the right side */
+.controlled-container {
+    padding-right: .5rem;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.controlled-container::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    box-shadow: inset -.5rem 0 .3rem var(--bottom-bar-bg);
+}
+
 
 /* UPPER CONTENT */
 .page {
