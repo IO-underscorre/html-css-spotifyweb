@@ -7,6 +7,8 @@
     --left-bar-bg: #000000;
     --bottom-bar-bg: #282828;
 
+    --padding-left-bar: 1.5rem;
+
     --title-fony: 1.5rem;
     --large-font: 1rem;
     --medium-font: .75rem;
@@ -73,6 +75,7 @@ a {
     height: 100%;
     width: 100%;
     box-shadow: inset -.5rem 0 .3rem var(--bottom-bar-bg);
+    pointer-events:none
 }
 
 /* Slider */
@@ -81,6 +84,7 @@ a {
     border-radius: 100em;
     cursor: pointer;
     background-color: var(--secondary-content);
+    vertical-align: middle;
 }
 
 .slider div {
@@ -94,8 +98,7 @@ a {
     background-color: var(--details);
 }
 
-.slider:hover div::after {
-    content: "";
+.slider div::after {
     position: absolute;
     top: 50%;
     right: 0;
@@ -105,6 +108,10 @@ a {
     height: .75rem;
     border-radius: 50%;
     background-color: var(--primary-content);
+}
+
+.slider:hover div::after {
+    content: "";
 }
 
 
@@ -242,9 +249,27 @@ a {
 }
 
 #volume {
-    width: 6.625rem;
+    display: flex;
+    align-items: center;
+    gap: .25rem;
 }
 
-#volume div {
+#volume .controller-button {
+    color: var(--primary-content);
+}
+
+#voume-slider {
+    width: 6.875rem;
+}
+
+#voume-slider div {
     width: 35%;
+}
+
+.controller-button:hover + #voume-slider div {
+    background-color: var(--details);
+}
+
+.controller-button:hover + #voume-slider div::after {
+    content: "";
 }
