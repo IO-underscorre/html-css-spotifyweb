@@ -20,8 +20,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-    line-height: 1.1;
 }
 
 body {
@@ -42,6 +40,20 @@ a {
 .page-wrapper {
     display: flex;
     flex-direction: column;
+}
+
+.audio-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.audio-title , .audio-subtitle {
+    display: block;
+}
+
+.audio-title {
+    color: var(--primary-content);
 }
 
 /* Container that makes overflowing text disapear on the right side */
@@ -85,7 +97,7 @@ a {
 .slider:hover div::after {
     content: "";
     position: absolute;
-    top: .125rem;
+    top: 50%;
     right: 0;
     z-index: 1;
     transform: translate(50% , -50%);
@@ -98,7 +110,7 @@ a {
 
 /* UPPER CONTENT */
 .page {
-    flex-basis: calc(100vh - 90px);
+    flex-basis: calc(100vh - 5.75rem);
     display: flex;
 }
 
@@ -119,6 +131,112 @@ a {
 
 /* BOTTOM MENU BAR */
 .bottom-bar {
-    flex-basis: 90px;
+    flex-basis: 5.75rem;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    justify-content: space-between;
     background-color: var(--bottom-bar-bg);
+    overflow-x: auto;
+}
+
+.side-controller {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.controller-button {
+    vertical-align: middle;
+}
+
+.controller-button:hover {
+    color: var(--primary-content);
+}
+
+/* Current song options */
+.bottom-bar .audio-container {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.bottom-bar .audio-cover {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.bottom-bar .controlled-container {
+    width: 5.5rem;
+}
+
+.bottom-bar .audio-title {
+    font-size: var(--medium-font);
+}
+
+.bottom-bar .audio-subtitle {
+    font-size: var(--small-font);
+}
+
+/* Track lenght options */
+.central-controller {
+    flex-basis: 25%;
+    min-width: 9.5rem;
+
+    color: var(--primary-content);
+    text-align: center;
+}
+
+.central-controller li:not(:last-child) {
+    display: inline-block;
+}
+
+.central-controller .controller-button {
+    font-size: 1.125rem;
+    margin: .25rem;
+}
+
+#play {
+    font-size: 2rem;
+}
+
+#track-lenght {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#track-lenght span {
+    width: 2.5rem;
+    font-size: var(--medium-font);
+}
+
+#track-lenght span:first-child {
+    text-align: left;
+}
+
+#track-lenght div {
+    flex-basis: calc(100% - 5.25rem);
+}
+
+#track-lenght div div {
+    width: 80%;
+}
+
+#track-lenght span:last-child {
+    text-align: right;
+}
+
+/* Volume, queue and device option */
+.side-controller:last-child {
+    justify-content: flex-end;
+}
+
+#volume {
+    width: 7rem;
+}
+
+#volume div {
+    width: 35%;
 }
