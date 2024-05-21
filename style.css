@@ -132,10 +132,10 @@ a {
 /* BOTTOM MENU BAR */
 .bottom-bar {
     flex-basis: 5.75rem;
-    padding: 0 10px;
+    padding: 0 .5rem;
     display: flex;
     align-items: center;
-    gap: .75rem;
+    gap: .5rem;
     justify-content: space-between;
     background-color: var(--bottom-bar-bg);
     overflow-x: auto;
@@ -182,19 +182,27 @@ a {
 /* Track lenght options */
 .central-controller {
     flex-basis: 25%;
-    min-width: 9.5rem;
+    min-width: 9rem;
 
     color: var(--primary-content);
     text-align: center;
 }
 
-.central-controller li:not(:last-child) {
+.central-controller li {
     display: inline-block;
+    margin: .25rem;
+}
+
+.central-controller li:first-child {
+    margin-left: 0;
+}
+
+.central-controller li:last-child {
+    margin-right: 0;
 }
 
 .central-controller .controller-button {
     font-size: 1.125rem;
-    margin: .25rem;
 }
 
 #play {
@@ -234,7 +242,7 @@ a {
 }
 
 #volume {
-    width: 7rem;
+    width: 6.625rem;
 }
 
 #volume div {
