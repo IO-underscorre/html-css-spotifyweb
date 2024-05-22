@@ -83,8 +83,15 @@ a {
     top: 0;
     height: 100%;
     width: 100%;
-    box-shadow: inset -.5rem 0 .3rem var(--bottom-bar-bg);
     pointer-events:none
+}
+
+.bottom-bar .controlled-container::after {
+    box-shadow: inset -.5rem 0 .3rem var(--bottom-bar-bg);
+}
+
+.left-bar .controlled-container::after {
+    box-shadow: inset -.5rem 0 .3rem var(--left-bar-bg);
 }
 
 /* Slider */
