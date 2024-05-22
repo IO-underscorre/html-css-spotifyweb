@@ -58,6 +58,15 @@ a {
     color: var(--primary-content);
 }
 
+.audio-title:hover {
+    text-decoration: underline;
+}
+
+.audio-subtitle:hover {
+    color: var(--primary-content);
+    text-decoration: underline;
+}
+
 /* Container that makes overflowing text disapear on the right side */
 .controlled-container {
     padding-right: .5rem;
